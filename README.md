@@ -1,2 +1,2 @@
-# item_analysis
-Concept of item analysis for assessment development and improvement.
+# Item Analysis
+Repo for a paper exploring item option analyes. 
