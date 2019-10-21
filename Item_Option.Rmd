@@ -8,19 +8,21 @@ author:
     corresponding : yes    # Define only one corresponding author
     address       : "175 Lokey Education 5262 University of Oregon"
     email         : "brockr@uoregon.edu"
-  - name          : "Behavior Research & Teaching (BRT)"
-    affiliation   : "University of Oregon"
+  - name          : "Daniel Anderson"
+    affiliation   : "1"
+  - name          : "Sevrina Tindal"
+    affiliation   : "1"
+  - name          : "Gerald Tindal"
+    affiliation   : "1"
 
 affiliation:
   - id            : "1"
-    institution   : "Wilhelm-Wundt-University"
-  - id            : "2"
-    institution   : "Konstanz Business School"
+    institution   : "University of Oregon"
 
 authornote: |
-  Add complete departmental affiliations for each author here. Each new line herein must be indented, like this line.
+  Behavioral Research & Teaching (BRT).
 
-  Enter author note here.
+  This work was funded as part of an ongoing contract with the Oregon Department of Education.
 
 abstract: |
   One or two sentences providing a **basic introduction** to the field,  comprehensible to a scientist in any discipline.
@@ -42,7 +44,7 @@ abstract: |
 keywords          : "Item Option Analysis"
 wordcount         : "X"
 
-bibliography      : ["r-references.bib"]
+bibliography      : refs.bib
 
 floatsintext      : no
 figurelist        : no
@@ -53,7 +55,11 @@ mask              : no
 draft             : no
 
 documentclass     : "apa6"
-classoption       : "man"
+header-includes:
+  - \raggedbottom
+  - \setlength{\parskip}{0pt}
+  - \newcommand{\GG}[1]{}
+class             : "man, fleqn, noextraspace"
 output            : papaja::apa6_pdf
 ---
 
@@ -90,12 +96,10 @@ We used `r cite_r("r-references.bib")` for all our analyses.
 \newpage
 
 # References
-```{r create_r-references}
-r_refs(file = "r-references.bib")
-```
+
 
 \begingroup
-\setlength{\parindent}{-0.5in}
+\setlength{\parindent}{-0.25in}
 \setlength{\leftskip}{0.5in}
 
 <div id = "refs"></div>
